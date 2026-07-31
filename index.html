@@ -393,7 +393,7 @@ footer .fnote{font-size:11.5px;color:#7a726c;margin-top:20px;max-width:640px;mar
           <div id="metrics"></div>
         </div>
         <div class="card">
-          <div class="sec-title">✨ A sua cartela de cores</div>
+          <div class="sec-title">✨ Uma amostra da sua cartela</div>
           <div class="sw-grid" id="paletteGrid"></div>
           <p class="metal" id="metalLine"></p>
           <div class="subttl">Seus neutros curinga</div>
@@ -696,12 +696,12 @@ function render(c,bio){
   el('rthumb').src=imgSrc;el('bSeason').textContent=c.fullName;el('bBio').textContent=bio.name;
   el('skinChip').style.background=c.skinHex;el('skinName').textContent=c.skinTxt;
   const mb=el('metrics');mb.innerHTML='';c.metrics.forEach(m=>{const row=document.createElement('div');row.className='mrow';row.innerHTML='<span class="ml">'+m.l+'</span><span class="mbarwrap"><span class="mbar"></span></span><span class="mv">'+m.v+'</span>';mb.appendChild(row);requestAnimationFrame(()=>{row.querySelector('.mbar').style.width=m.pct+'%';});});
-  swatches('paletteGrid',c.season.palette);el('metalLine').innerHTML='💍 Seu metal ideal: <b>'+c.season.metal+'</b>';swatches('neutralGrid',c.season.neutros);
+  swatches('paletteGrid',c.season.palette.slice(0,5));el('metalLine').innerHTML='💍 Seu metal ideal: <b>'+c.season.metal+'</b>';el('metalLine').innerHTML='🔒 Esta é só uma <b>amostra</b>. A sua <b>Cartela de Cor completa</b> — todas as cores, os neutros e o metal ideal, em alta pra guardar e usar — você desbloqueia por <b>R$10</b> no WhatsApp.';el('neutralGrid').style.display='none';if(el('neutralGrid').previousElementSibling)el('neutralGrid').previousElementSibling.style.display='none';el('bioYes').closest('.card').style.display='none';el('bioNo').closest('.card').style.display='none';el('lookBox').closest('.card').style.display='none';
   fillList('bioYes',bio.yes);fillList('bioNo',bio.no);
   const lookCols=[c.season.palette[0],c.season.neutros[0],c.season.palette[4]];const lookLbl=['Peça principal','Neutro de base','Ponto de cor'];const lb=el('lookBox');lb.innerHTML='';lookCols.forEach((hex,i)=>{const d=document.createElement('div');d.className='lk';d.innerHTML='<div class="lksw" style="background:'+hex+'"></div><div class="lkl">'+lookLbl[i]+'</div>';lb.appendChild(d);});
   el('lookCaption').textContent='Ex.: base neutra + a sua cor de destaque = um look de trabalho elegante e no seu tom.';
   const contrastTip=c.contrastHigh?'Como o seu contraste é alto, ouse em combinações de cores bem diferentes entre si — fica poderoso em você.':'Como o seu contraste é mais suave, prefira tons próximos e harmônicos, sem estourar em preto e branco juntos.';
-  el('devo').innerHTML='A leitura da sua foto apontou '+c.skinTxt.toLowerCase()+', o que te posiciona como <b>'+c.fullName+'</b>: a sua paleta pede '+c.season.devoCor+'. '+bio.devo+' '+contrastTip;
+  el('devo').innerHTML='A leitura da sua foto apontou '+c.skinTxt.toLowerCase()+', o que te posiciona como <b>'+c.fullName+'</b>. A sua paleta pede '+c.season.devoCor+'. '+contrastTip+' <br><br>💛 A sua cartela completa, o seu biotipo e o seu estilo vêm nos materiais que você desbloqueia no WhatsApp.';
 }
 function resetAll(){stopCamera();['camView','preview','quiz','loader','result'].forEach(id=>el(id).style.display='none');el('camErr').style.display='none';el('chooser').style.display='block';el('cardUpload').style.display='block';el('file').value='';for(const k in answers)delete answers[k];qIdx=0;toolTop();}
 el('reset1').addEventListener('click',resetAll);
