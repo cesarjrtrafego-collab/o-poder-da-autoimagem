@@ -281,8 +281,8 @@ footer .fnote{font-size:11.5px;color:#7a726c;margin-top:20px;max-width:640px;mar
   <div class="wrap hero-grid">
     <div class="hero-text">
       <span class="eyebrow">Consultoria de imagem por IA</span>
-      <h1 class="hero-h1">Descubra as <em>cores</em> e o <em>estilo</em> que valorizam você</h1>
-      <p class="lead">Envie uma foto e receba, na hora, a sua estação de cor, o seu biotipo e as peças que mais combinam com você — direto no seu celular, de graça.</p>
+      <h1 class="hero-h1">Descubra as <em>cores</em> que valorizam você</h1>
+      <p class="lead">Envie uma foto do seu rosto e receba, na hora, a sua estação de cor e as tonalidades que mais valorizam você — direto no seu celular, de graça.</p>
       <div class="hero-cta">
         <a href="#ferramenta" class="btn-lp btn-fill">Fazer minha análise grátis</a>
       </div>
@@ -316,21 +316,21 @@ footer .fnote{font-size:11.5px;color:#7a726c;margin-top:20px;max-width:640px;mar
   <div class="wrap">
     <div class="tool-head">
       <span class="badge-free">100% grátis · na hora</span>
-      <h2 class="section-headline">Faça a sua <em>análise de imagem</em> agora</h2>
-      <p class="lead" style="margin-top:12px">Envie uma foto de corpo inteiro, responda 3 perguntinhas e receba o seu diagnóstico completo. Sua foto é processada só no seu aparelho.</p>
+      <h2 class="section-headline">Descubra as suas <em>cores</em> agora</h2>
+      <p class="lead" style="margin-top:12px">Envie uma foto do seu rosto e receba na hora a sua análise de cores. Sua foto é processada só no seu aparelho.</p>
     </div>
 
     <div id="toolApp">
       <div class="card" id="cardUpload">
         <div id="chooser">
-          <div class="ic">🧍‍♀️</div>
+          <div class="ic">📸</div>
           <p class="sub" style="margin:0 0 10px;font-weight:600;color:var(--ink)">Como tirar a sua foto certinha:</p>
           <ul style="list-style:none;text-align:left;margin:0 auto 16px;max-width:340px;font-size:13.5px;color:#4a433d;line-height:1.45">
             <li style="padding:4px 0">☀️ <b>Luz natural</b> — perto de uma janela, de dia. Sem lâmpada ou ring light.</li>
-            <li style="padding:4px 0">🧼 <b>Sem filtro e sem maquiagem pesada</b> — pra ler a sua cor real.</li>
-            <li style="padding:4px 0">🧍 <b>Corpo inteiro, de frente</b>, com a câmera na altura dos olhos.</li>
-            <li style="padding:4px 0">👖 <b>Roupa justa e lisa</b> (tipo look de academia), em tom neutro.</li>
-            <li style="padding:4px 0">💇 <b>Cabelo à mostra</b>, postura ereta e fundo de uma cor só.</li>
+            <li style="padding:4px 0">🙂 <b>Foto do rosto, de frente</b>, com a câmera na altura dos olhos.</li>
+            <li style="padding:4px 0">🧼 <b>Sem maquiagem e sem filtro</b> — pra ler a sua cor real.</li>
+            <li style="padding:4px 0">💇 <b>Cabelo à mostra</b> (preso ou pra trás) e sem óculos.</li>
+            <li style="padding:4px 0">👕 De preferência com uma peça de <b>tom neutro</b> perto do rosto.</li>
           </ul>
           <button class="btn btn-primary" id="btnCam">📸 Tirar a foto agora</button>
           <button class="btn btn-outline" id="btnGallery">📁 Enviar da galeria</button>
@@ -350,13 +350,6 @@ footer .fnote{font-size:11.5px;color:#7a726c;margin-top:20px;max-width:640px;mar
         </div>
         <p class="tip">🔒 Sua foto é processada <b>somente neste aparelho</b> e não é enviada para lugar nenhum.</p>
       </div>
-      <div class="card quiz" id="quiz">
-        <div class="qprogress"><i id="qbar"></i></div>
-        <div class="qnum" id="qnum">Pergunta 1 de 3</div>
-        <div class="qtext" id="qtext"></div>
-        <div id="qopts"></div>
-        <button class="btn btn-ghost" id="qback" style="margin-top:4px">← voltar</button>
-      </div>
       <div class="card loader" id="loader">
         <div class="ring"></div>
         <div class="lstep" id="lstep">Lendo os tons da sua pele…</div>
@@ -366,7 +359,6 @@ footer .fnote{font-size:11.5px;color:#7a726c;margin-top:20px;max-width:640px;mar
           <img id="rthumb" alt="você">
           <div class="twin">
             <div class="badge"><small>Sua estação de cor</small><b id="bSeason">—</b></div>
-            <div class="badge"><small>Seu biotipo</small><b id="bBio">—</b></div>
           </div>
         </div>
         <div class="card">
@@ -380,13 +372,6 @@ footer .fnote{font-size:11.5px;color:#7a726c;margin-top:20px;max-width:640px;mar
           <p class="metal" id="metalLine"></p>
           <div class="subttl">Seus neutros curinga</div>
           <div class="n-grid" id="neutralGrid"></div>
-        </div>
-        <div class="card"><div class="sec-title">👗 Peças que valorizam você</div><ul class="list yes" id="bioYes"></ul></div>
-        <div class="card"><div class="sec-title">🚫 O que evitar</div><ul class="list no" id="bioNo"></ul></div>
-        <div class="card">
-          <div class="sec-title">🧩 Um look montado no seu perfil</div>
-          <div class="look" id="lookBox"></div>
-          <p class="tip" id="lookCaption" style="margin-top:14px"></p>
         </div>
         <div class="card"><div class="sec-title">💬 A sua devolutiva</div><p class="devo" id="devo"></p></div>
         <div class="toolcta">
@@ -568,26 +553,22 @@ el('btnCam').addEventListener('click',startCamera);
 el('btnFlip').addEventListener('click',()=>{facing=(facing==='user')?'environment':'user';startCamera();});
 el('btnCancelCam').addEventListener('click',()=>{stopCamera();el('camView').style.display='none';el('chooser').style.display='block';});
 el('btnShot').addEventListener('click',()=>{const v=el('video');if(!v.videoWidth)return;const c=document.createElement('canvas');c.width=v.videoWidth;c.height=v.videoHeight;c.getContext('2d').drawImage(v,0,0);stopCamera();showPreview(c.toDataURL('image/jpeg',0.92));});
-el('toQuiz').addEventListener('click',()=>{el('cardUpload').style.display='none';qIdx=0;renderQuestion();el('quiz').style.display='block';toolTop();});
-function renderQuestion(){const q=QUESTIONS[qIdx];el('qnum').textContent='Pergunta '+(qIdx+1)+' de '+QUESTIONS.length;el('qbar').style.width=((qIdx+1)/QUESTIONS.length*100)+'%';el('qtext').textContent=q.text;const box=el('qopts');box.innerHTML='';q.opts.forEach(([label,val])=>{const d=document.createElement('div');d.className='opt';d.textContent=label;d.onclick=()=>{answers[q.key]=val;next();};box.appendChild(d);});el('qback').style.visibility=qIdx===0?'hidden':'visible';}
-function next(){if(qIdx<QUESTIONS.length-1){qIdx++;renderQuestion();}else{runAnalysis();}}
-el('qback').addEventListener('click',()=>{if(qIdx>0){qIdx--;renderQuestion();}});
-const STEPS=["Lendo os tons da sua pele…","Medindo subtom e profundidade…","Calculando intensidade e contraste…","Cruzando com o seu biotipo…","Montando o seu diagnóstico ✨"];
-function runAnalysis(){el('quiz').style.display='none';el('loader').style.display='block';let i=0;el('lstep').textContent=STEPS[0];const t=setInterval(()=>{i++;if(i<STEPS.length)el('lstep').textContent=STEPS[i];},600);setTimeout(()=>{clearInterval(t);const c=analyzeColor(imgEl);const bio=classifyBio(answers.q1,answers.q2,answers.q3);render(c,bio);el('loader').style.display='none';el('result').style.display='block';toolTop();},3000);}
+el('toQuiz').addEventListener('click',()=>{el('cardUpload').style.display='none';runAnalysis();});
+const STEPS=["Lendo os tons da sua pele…","Medindo subtom e profundidade…","Calculando intensidade e contraste…","Montando a sua cartela ✨"];
+function runAnalysis(){el('loader').style.display='block';let i=0;el('lstep').textContent=STEPS[0];const t=setInterval(()=>{i++;if(i<STEPS.length)el('lstep').textContent=STEPS[i];},600);setTimeout(()=>{clearInterval(t);const c=analyzeColor(imgEl);render(c);el('loader').style.display='none';el('result').style.display='block';toolTop();},2600);}
 function swatches(id,colors){const c=el(id);c.innerHTML='';colors.forEach(hex=>{const d=document.createElement('div');d.className='sw';d.style.background=hex;c.appendChild(d);});}
 function fillList(id,arr){const u=el(id);u.innerHTML='';arr.forEach(t=>{const li=document.createElement('li');li.textContent=t;u.appendChild(li);});}
-function render(c,bio){
-  el('rthumb').src=imgSrc;el('bSeason').textContent=c.fullName;el('bBio').textContent=bio.name;
+function render(c){
+  el('rthumb').src=imgSrc;el('bSeason').textContent=c.fullName;
   el('skinChip').style.background=c.skinHex;el('skinName').textContent=c.skinTxt;
   const mb=el('metrics');mb.innerHTML='';c.metrics.forEach(m=>{const row=document.createElement('div');row.className='mrow';row.innerHTML='<span class="ml">'+m.l+'</span><span class="mbarwrap"><span class="mbar"></span></span><span class="mv">'+m.v+'</span>';mb.appendChild(row);requestAnimationFrame(()=>{row.querySelector('.mbar').style.width=m.pct+'%';});});
-  swatches('paletteGrid',c.season.palette.slice(0,5));el('metalLine').innerHTML='💍 Seu metal ideal: <b>'+c.season.metal+'</b>';el('metalLine').innerHTML='🔒 Esta é só uma <b>amostra</b>. A sua <b>Cartela de Cor completa</b> — todas as cores, os neutros e o metal ideal, em alta pra guardar e usar — você desbloqueia por <b>R$10</b> no WhatsApp.';el('neutralGrid').style.display='none';if(el('neutralGrid').previousElementSibling)el('neutralGrid').previousElementSibling.style.display='none';el('bioYes').closest('.card').style.display='none';el('bioNo').closest('.card').style.display='none';el('lookBox').closest('.card').style.display='none';
-  fillList('bioYes',bio.yes);fillList('bioNo',bio.no);
-  const lookCols=[c.season.palette[0],c.season.neutros[0],c.season.palette[4]];const lookLbl=['Peça principal','Neutro de base','Ponto de cor'];const lb=el('lookBox');lb.innerHTML='';lookCols.forEach((hex,i)=>{const d=document.createElement('div');d.className='lk';d.innerHTML='<div class="lksw" style="background:'+hex+'"></div><div class="lkl">'+lookLbl[i]+'</div>';lb.appendChild(d);});
-  el('lookCaption').textContent='Ex.: base neutra + a sua cor de destaque = um look de trabalho elegante e no seu tom.';
+  swatches('paletteGrid',c.season.palette.slice(0,5));
+  el('metalLine').innerHTML='🔒 Esta é só uma <b>amostra</b>. A sua <b>Cartela de Cor completa</b> — todas as cores, os neutros e o metal ideal, em alta pra guardar e usar — você desbloqueia por <b>R$10</b> no WhatsApp.';
+  el('neutralGrid').style.display='none';if(el('neutralGrid').previousElementSibling)el('neutralGrid').previousElementSibling.style.display='none';
   const contrastTip=c.contrastHigh?'Como o seu contraste é alto, ouse em combinações de cores bem diferentes entre si — fica poderoso em você.':'Como o seu contraste é mais suave, prefira tons próximos e harmônicos, sem estourar em preto e branco juntos.';
-  el('devo').innerHTML='A leitura da sua foto apontou '+c.skinTxt.toLowerCase()+', o que te posiciona como <b>'+c.fullName+'</b>. A sua paleta pede '+c.season.devoCor+'. '+contrastTip+' <br><br>💛 A sua cartela completa, o seu biotipo e o seu estilo vêm nos materiais que você desbloqueia no WhatsApp.';
+  el('devo').innerHTML='A leitura da sua foto apontou '+c.skinTxt.toLowerCase()+', o que te posiciona como <b>'+c.fullName+'</b>. A sua paleta pede '+c.season.devoCor+'. '+contrastTip+' <br><br>💛 A sua <b>cartela completa</b> (e, se quiser, o seu biotipo e estilo) você desbloqueia no WhatsApp.';
 }
-function resetAll(){stopCamera();['camView','preview','quiz','loader','result'].forEach(id=>el(id).style.display='none');el('camErr').style.display='none';el('chooser').style.display='block';el('cardUpload').style.display='block';el('file').value='';for(const k in answers)delete answers[k];qIdx=0;toolTop();}
+function resetAll(){stopCamera();['camView','preview','loader','result'].forEach(id=>el(id).style.display='none');el('camErr').style.display='none';el('chooser').style.display='block';el('cardUpload').style.display='block';el('file').value='';toolTop();}
 el('reset1').addEventListener('click',resetAll);
 el('reset2').addEventListener('click',resetAll);
 </script>
