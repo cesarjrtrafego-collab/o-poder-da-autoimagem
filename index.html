@@ -3,6 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1735391017805077');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1735391017805077&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <title>O Poder da Autoimagem — Descubra suas cores e o seu estilo</title>
 <meta name="description" content="Análise de imagem por IA: descubra na hora as cores e o estilo que valorizam você. Consultoria de imagem com Kamila Lima.">
 <link rel="icon" href="logo.jpg">
@@ -467,6 +484,8 @@ const mm=document.getElementById('mobmenu');
 document.getElementById('burger').addEventListener('click',()=>mm.classList.add('open'));
 document.getElementById('mobclose').addEventListener('click',()=>mm.classList.remove('open'));
 document.querySelectorAll('.mm-link').forEach(a=>a.addEventListener('click',()=>mm.classList.remove('open')));
+/* Meta Pixel: evento de Lead ao clicar pra ir pro WhatsApp */
+document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',()=>{try{fbq('track','Lead');}catch(e){}}));
 /* FAQ */
 document.querySelectorAll('.faq-q').forEach(q=>{
   q.addEventListener('click',()=>{
