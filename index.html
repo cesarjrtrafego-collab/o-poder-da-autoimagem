@@ -52,7 +52,7 @@ h1,h2,h3,.font-d{font-family:'Fraunces','Georgia',serif}
 .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
 .eyebrow{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;font-family:'Poppins',sans-serif;background:var(--grad-berry);-webkit-background-clip:text;background-clip:text;color:transparent}
 h2{font-weight:600;font-size:clamp(1.9rem,4.8vw,3.2rem);line-height:1.08;letter-spacing:-.015em}
-h2 em{font-style:italic;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2 em{font-style:italic;color:var(--wine)}
 .lead{color:#6a5b60;font-size:clamp(1.02rem,1.6vw,1.18rem);max-width:640px}
 section{padding-block:70px;position:relative}
 @media(min-width:768px){section{padding-block:110px}}
@@ -100,12 +100,13 @@ nav.solid{background:rgba(255,248,243,.85);backdrop-filter:blur(14px);box-shadow
 .hero .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.7);backdrop-filter:blur(6px);border-radius:999px;padding:7px 16px 7px 8px;font-size:12.5px;font-weight:600;color:var(--wine-dark);margin-bottom:20px}
 .hero .pill b{background:var(--grad-warm);color:#fff;padding:3px 9px;border-radius:999px;font-size:11px;letter-spacing:.03em}
 .hero h1{font-weight:600;font-size:clamp(2.3rem,6.3vw,4.4rem);line-height:1.02;letter-spacing:-.02em;margin:6px 0 20px;color:#3a2229}
-.hero h1 em{font-style:italic;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 em{font-style:italic;color:var(--wine)}
 .hero .lead{margin-bottom:30px;color:#6a4f57}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
-.hero-trust{display:flex;align-items:center;gap:10px;margin-top:26px;font-size:13px;color:#7a5f66}
-.hero-trust .av{display:flex}
+.hero-trust{display:flex;flex-direction:column;align-items:flex-start;gap:11px;margin-top:26px;font-size:13px;color:#7a5f66}
+.hero-trust .av{display:flex;padding-left:9px}
 .hero-trust .av img{width:34px;height:34px;border-radius:50%;border:2px solid #fff;margin-left:-9px;object-fit:cover}
+.hero-trust span{max-width:340px}
 /* Hero visual */
 .hero-visual{position:relative}
 .hero-photo{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;position:relative;border:5px solid #fff}
@@ -154,6 +155,15 @@ nav.solid{background:rgba(255,248,243,.85);backdrop-filter:blur(14px);box-shadow
 .mock .mock-t{font-family:'Fraunces';font-size:14px;margin-bottom:12px;opacity:.92;display:flex;justify-content:space-between}
 .mock .mgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
 .mock .mgrid span{aspect-ratio:1;border-radius:7px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+/* Passos "o que te espera" */
+.steps3-head{text-align:center;margin-top:66px}
+.steps3{display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px}
+@media(min-width:760px){.steps3{grid-template-columns:repeat(3,1fr);gap:22px}}
+.s3{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 24px;text-align:center;box-shadow:var(--shadow-sm);position:relative}
+.s3 .s3ic{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;margin:0 auto 15px;box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.s3 h4{font-family:'Fraunces',serif;font-weight:600;font-size:18px;margin-bottom:7px}
+.s3 p{font-size:13.7px;color:#6a5b60}
+.s3 .s3n{position:absolute;top:16px;right:18px;font-family:'Fraunces',serif;font-weight:600;font-size:22px;color:var(--line)}
 
 /* Sobre */
 .about{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
@@ -283,8 +293,8 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
   <div class="wrap hero-grid">
     <div class="hero-text">
       <span class="pill">✨ Consultoria de imagem por IA <b>GRÁTIS</b></span>
-      <h1 class="hero-h1">Descubra as <em>cores</em> que fazem você brilhar</h1>
-      <p class="lead">Envie uma foto do seu rosto e receba, na hora, a sua estação de cor e as tonalidades que mais valorizam você — de graça, direto no seu celular. 💃</p>
+      <h1 class="hero-h1">As cores certas <em>iluminam</em> você.<br>As erradas te <em>envelhecem</em>.</h1>
+      <p class="lead">Descubra agora, de graça, a sua estação de cor e as tonalidades que mais valorizam a sua pele — e transforme a forma como você se veste, sem erro. ✨</p>
       <div class="hero-cta">
         <a href="#ferramenta" class="btn-lp btn-fill">Fazer minha análise grátis ✨</a>
       </div>
@@ -397,7 +407,7 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">A sua entrega</span>
-      <h2 class="section-headline" style="margin-top:12px">Do <em>gostinho</em> grátis à sua imagem <em>completa</em></h2>
+      <h2 class="section-headline" style="margin-top:12px">Da amostra grátis à sua <em>imagem completa</em></h2>
       <p class="lead center" style="margin-top:14px">Aqui você já vê uma amostra. No WhatsApp, a gente entrega tudo com calma, passo a passo — do seu jeito.</p>
     </div>
     <div class="cmp">
@@ -432,6 +442,19 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
           <a href="https://wa.me/5562991361147?text=Oi!%20%F0%9F%92%9B%20Quero%20descobrir%20a%20minha%20imagem%20completa" target="_blank" rel="noopener" class="btn-lp btn-wa">Quero a minha imagem completa 💬</a>
         </div>
       </div>
+    </div>
+
+    <div class="steps3-head">
+      <span class="eyebrow">É simples assim</span>
+      <h2 class="section-headline" style="margin-top:12px">O que te espera do outro lado 💛</h2>
+    </div>
+    <div class="steps3">
+      <div class="s3 reveal"><span class="s3n">01</span><div class="s3ic" style="background:linear-gradient(135deg,#FF9E7D,#F7B32B)">💬</div><h4>Você chama no WhatsApp</h4><p>A Mila, a sua consultora, te recebe na hora — com todo carinho.</p></div>
+      <div class="s3 reveal"><span class="s3n">02</span><div class="s3ic" style="background:linear-gradient(135deg,#E5679E,#8A4FBF)">🎨</div><h4>Recebe a sua imagem completa</h4><p>A sua cartela de cores, o seu biotipo e o seu estilo — um dossiê só seu, lindo pra guardar.</p></div>
+      <div class="s3 reveal"><span class="s3n">03</span><div class="s3ic" style="background:linear-gradient(135deg,#4FA9E6,#12B0A0)">✨</div><h4>Consultora no bolso</h4><p>"Combina comigo?", "o que visto hoje?" — toda dúvida de roupa resolvida, todo dia.</p></div>
+    </div>
+    <div class="center" style="margin-top:42px">
+      <a href="https://wa.me/5562991361147?text=Oi!%20%F0%9F%92%9B%20Quero%20come%C3%A7ar%20a%20minha%20transforma%C3%A7%C3%A3o%20de%20imagem" target="_blank" rel="noopener" class="btn-lp btn-wa">Quero começar a minha transformação 💬</a>
     </div>
   </div>
 </section>
@@ -523,17 +546,13 @@ document.querySelectorAll('[data-carousel]').forEach(carousel=>{
 });
 /* GSAP reveals */
 if(typeof gsap!=='undefined'){
-  if(typeof SplitType!=='undefined'){
-    try{const st=new SplitType('.hero-h1',{types:'words'});gsap.from(st.words,{opacity:0,yPercent:60,duration:1,stagger:.07,ease:'cubic-bezier(0.22,1,0.36,1)'});}catch(e){gsap.from('.hero-h1',{opacity:0,y:30,duration:1});}
-  }else{gsap.from('.hero-h1',{opacity:0,y:30,duration:1});}
+  gsap.from('.hero-h1',{opacity:0,y:30,duration:1,ease:'cubic-bezier(0.22,1,0.36,1)'});
   gsap.from('.hero-text .pill, .hero-text .lead, .hero-cta, .hero-trust',{opacity:0,y:24,duration:.8,stagger:.12,delay:.3,ease:'cubic-bezier(0.22,1,0.36,1)'});
   gsap.from('.hero-visual',{opacity:0,y:30,scale:.97,duration:1.1,delay:.2,ease:'cubic-bezier(0.22,1,0.36,1)'});
   if(typeof ScrollTrigger!=='undefined'){
-    if(typeof SplitType!=='undefined'){
-      gsap.utils.toArray('.section-headline').forEach(el=>{try{const s=new SplitType(el,{types:'words'});gsap.from(s.words,{opacity:0,y:26,duration:.7,stagger:.05,ease:'cubic-bezier(0.22,1,0.36,1)',scrollTrigger:{trigger:el,start:'top 86%'}});}catch(e){}});
-    }
+    gsap.utils.toArray('.section-headline').forEach(el=>{gsap.from(el,{opacity:0,y:26,duration:.7,ease:'cubic-bezier(0.22,1,0.36,1)',scrollTrigger:{trigger:el,start:'top 86%'}});});
     gsap.utils.toArray('section').forEach(sec=>{
-      const items=sec.querySelectorAll('.reveal,.tcard,.cmp-card,.swrow');
+      const items=sec.querySelectorAll('.reveal,.tcard,.cmp-card,.swrow,.s3');
       if(items.length)gsap.from(items,{opacity:0,y:40,duration:.7,stagger:.08,ease:'cubic-bezier(0.22,1,0.36,1)',scrollTrigger:{trigger:sec,start:'top 80%'}});
     });
     if(!isMobile){gsap.to('.hero-photo img',{yPercent:-8,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});}
