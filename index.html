@@ -151,10 +151,17 @@ nav.solid{background:rgba(255,248,243,.85);backdrop-filter:blur(14px);box-shadow
 .cmp-full .locked{opacity:.62}
 .cmp-cta{margin-top:24px}
 /* mini cartela mockup */
-.mock{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:18px;margin-top:22px}
-.mock .mock-t{font-family:'Fraunces';font-size:14px;margin-bottom:12px;opacity:.92;display:flex;justify-content:space-between}
-.mock .mgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
-.mock .mgrid span{aspect-ratio:1;border-radius:7px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.mock{background:#fff;border-radius:16px;padding:18px;margin-top:22px;box-shadow:0 20px 46px rgba(0,0,0,.34);color:var(--ink)}
+.mock .mhead{display:flex;align-items:center;justify-content:space-between;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--line)}
+.mock .mtag{font-family:'Fraunces',serif;font-weight:600;font-size:17px;color:var(--wine)}
+.mock .msub{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.mock .msect{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px;font-weight:600}
+.mock .mgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.mock .mgrid span{aspect-ratio:1;border-radius:7px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.mock .ngrid{grid-template-columns:repeat(4,1fr)}
+.mock .mfoot{display:flex;gap:8px;margin-top:14px}
+.mock .mchip{flex:1;background:#FFEFF4;border-radius:10px;padding:9px 6px;text-align:center;font-size:10.5px;color:var(--muted);line-height:1.3}
+.mock .mchip b{display:block;font-family:'Fraunces',serif;font-size:13.5px;color:var(--wine-dark);font-weight:600}
 /* Passos "o que te espera" */
 .steps3-head{text-align:center;margin-top:66px}
 .steps3{display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px}
@@ -292,7 +299,7 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
 <header class="hero" id="topo">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <span class="pill">✨ Consultoria de imagem por IA <b>GRÁTIS</b></span>
+      <span class="pill">✨ A sua Paleta de Cor <b>100% GRÁTIS</b></span>
       <h1 class="hero-h1">As cores certas <em>iluminam</em> você.<br>As erradas te <em>envelhecem</em>.</h1>
       <p class="lead">Descubra agora, de graça, a sua estação de cor e as tonalidades que mais valorizam a sua pele — e transforme a forma como você se veste, sem erro. ✨</p>
       <div class="hero-cta">
@@ -413,13 +420,17 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
     <div class="cmp">
       <div class="cmp-card cmp-free reveal">
         <span class="tag">Agora · grátis</span>
-        <h3>A sua amostra</h3>
+        <h3>A sua Paleta de Cor</h3>
         <p class="cdesc">O aperitivo pra você já sentir o poder das suas cores.</p>
         <ul class="cmp-list">
           <li><span class="ck">✓</span> A sua <b>estação de cor</b> entre as 12</li>
           <li><span class="ck">✓</span> A leitura da sua pele (subtom, profundidade, intensidade)</li>
-          <li><span class="ck">✓</span> Uma <b>amostra de 5 cores</b> da sua cartela</li>
+          <li><span class="ck">✓</span> Uma <b>amostra</b> da sua cartela de cores</li>
+          <li><span class="ck">✓</span> <b>Bônus:</b> o guia “Como Usar as Cores Certas”</li>
         </ul>
+        <div class="cmp-cta">
+          <a href="#ferramenta" class="btn-lp btn-line">Quero a minha paleta de cor (grátis)</a>
+        </div>
       </div>
       <div class="cmp-card cmp-full reveal">
         <span class="tag">No WhatsApp · completo</span>
@@ -427,15 +438,27 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
         <p class="cdesc">O dossiê de verdade, personalizado e lindo, pra guardar e usar sempre.</p>
         <ul class="cmp-list">
           <li><span class="ck">★</span> A sua <b>cartela de cores completa</b> — todas as cores, os neutros e o metal ideal</li>
-          <li><span class="ck">★</span> <span class="locked">🔒 O seu <b>biotipo</b> — os cortes que valorizam o seu corpo</span></li>
-          <li><span class="ck">★</span> <span class="locked">🔒 O seu <b>estilo</b> — a sua assinatura de imagem</span></li>
-          <li><span class="ck">★</span> <span class="locked">🔒 A <b>consultora no bolso</b> pra te ajudar todo dia</span></li>
+          <li><span class="ck">★</span> O seu <b>biotipo</b> — os cortes que valorizam o seu corpo</li>
+          <li><span class="ck">★</span> O seu <b>estilo</b> — a sua assinatura de imagem</li>
+          <li><span class="ck">★</span> A <b>consultora no bolso</b> pra te ajudar todo dia</li>
+          <li><span class="ck">★</span> <b>Bônus:</b> e-book “Como Disfarçar o que te Incomoda”</li>
+          <li><span class="ck">★</span> <b>Bônus:</b> e-book “Imagem que Atrai Olhares”</li>
         </ul>
         <div class="mock">
-          <div class="mock-t"><span>🎨 A sua cartela</span><span style="opacity:.7">prévia</span></div>
+          <div class="mhead"><div class="mtag">Primavera Clara</div><div class="msub">Prévia · sua cartela</div></div>
+          <div class="msect">Cores que te iluminam</div>
           <div class="mgrid">
-            <span style="background:#FF7F50"></span><span style="background:#FFB347"></span><span style="background:#FFD966"></span><span style="background:#66CDAA"></span><span style="background:#7FD1B9"></span><span style="background:#F08080"></span>
-            <span style="background:#E5679E"></span><span style="background:#8A4FBF"></span><span style="background:#4FA9E6"></span><span style="background:#12B0A0"></span><span style="background:#F7B32B"></span><span style="background:#FF6B6B"></span>
+            <span style="background:#FF7F50"></span><span style="background:#FFB347"></span><span style="background:#FFD966"></span><span style="background:#A8D08D"></span><span style="background:#66CDAA"></span><span style="background:#7FD1B9"></span>
+            <span style="background:#FF9E9E"></span><span style="background:#F08080"></span><span style="background:#F4A460"></span><span style="background:#E5679E"></span><span style="background:#F7B32B"></span><span style="background:#FF6B6B"></span>
+          </div>
+          <div class="msect">Neutros curinga</div>
+          <div class="mgrid ngrid">
+            <span style="background:#F5E9D0"></span><span style="background:#C8A165"></span><span style="background:#FFF8E7"></span><span style="background:#9DB4C0"></span>
+          </div>
+          <div class="mfoot">
+            <div class="mchip"><b>Ouro</b>metal ideal</div>
+            <div class="mchip"><b>Quente</b>subtom</div>
+            <div class="mchip"><b>Médio</b>contraste</div>
           </div>
         </div>
         <div class="cmp-cta">
