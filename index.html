@@ -25,7 +25,7 @@ src="https://www.facebook.com/tr?id=1735391017805077&ev=PageView&noscript=1"
 <link rel="icon" href="logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
@@ -151,17 +151,37 @@ nav.solid{background:rgba(255,248,243,.85);backdrop-filter:blur(14px);box-shadow
 .cmp-full .locked{opacity:.62}
 .cmp-cta{margin-top:24px}
 /* mini cartela mockup */
-.mock{background:#fff;border-radius:16px;padding:18px;margin-top:22px;box-shadow:0 20px 46px rgba(0,0,0,.34);color:var(--ink)}
-.mock .mhead{display:flex;align-items:center;justify-content:space-between;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--line)}
-.mock .mtag{font-family:'Fraunces',serif;font-weight:600;font-size:17px;color:var(--wine)}
-.mock .msub{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.mock .msect{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px;font-weight:600}
-.mock .mgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
-.mock .mgrid span{aspect-ratio:1;border-radius:7px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
-.mock .ngrid{grid-template-columns:repeat(4,1fr)}
-.mock .mfoot{display:flex;gap:8px;margin-top:14px}
-.mock .mchip{flex:1;background:#FFEFF4;border-radius:10px;padding:9px 6px;text-align:center;font-size:10.5px;color:var(--muted);line-height:1.3}
-.mock .mchip b{display:block;font-family:'Fraunces',serif;font-size:13.5px;color:var(--wine-dark);font-weight:600}
+/* Prévia do dossiê (estilo colorimetria profissional) */
+.dossie-wrap{margin-top:70px;text-align:center}
+.dossie-preview{max-width:720px;margin:28px auto 0}
+.dp-card{background:linear-gradient(180deg,#FFFDFB,#FFF4EE);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:24px 22px;text-align:left}
+.dp-head{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:18px}
+.dp-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.15rem,3.4vw,1.55rem);color:var(--wine-dark);line-height:1.1}
+.dp-sub{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:4px}
+.dp-crown{width:46px;height:46px;border-radius:50%;background:var(--grad-warm);display:flex;align-items:center;justify-content:center;font-size:20px;flex:none;box-shadow:0 8px 20px rgba(255,126,95,.3)}
+.dp-top{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:620px){.dp-top{grid-template-columns:1fr 1fr;gap:22px}}
+.dp-analysis{display:flex;flex-direction:column;gap:12px}
+.dp-row{display:flex;align-items:center;gap:11px}
+.dp-row .dp-ic{width:36px;height:36px;border-radius:11px;background:#FFEFF4;display:flex;align-items:center;justify-content:center;font-size:17px;flex:none}
+.dp-row small{display:block;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.dp-row b{font-family:'Fraunces',serif;font-size:15.5px;color:var(--ink)}
+.dp-season{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.dp-season small{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.dp-season-name{font-family:'Dancing Script',cursive;font-weight:700;font-size:32px;color:var(--wine);line-height:1;margin:3px 0 8px}
+.dp-season p{font-size:12.5px;color:#6a5b60;line-height:1.5}
+.dp-cartela-t{background:var(--grad-berry);color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:14px;text-align:center;padding:9px 14px;border-radius:999px;margin:22px auto 12px;display:table}
+.dp-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:5px}
+@media(min-width:620px){.dp-grid{grid-template-columns:repeat(13,1fr);gap:6px}}
+.dp-grid span{aspect-ratio:1;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.dp-foot{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
+@media(min-width:520px){.dp-foot{grid-template-columns:1.6fr 1fr}}
+.dp-mini{background:#FFF4EE;border:1px solid var(--line);border-radius:14px;padding:13px 15px}
+.dp-mini small{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px}
+.dp-mini b{font-family:'Fraunces',serif;color:var(--wine-dark);font-size:15px}
+.dp-ng{display:flex;gap:6px}
+.dp-ng span{width:28px;height:28px;border-radius:8px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.dp-note{font-size:12.5px;color:var(--muted);margin-top:16px;text-align:center}
 /* Passos "o que te espera" */
 .steps3-head{text-align:center;margin-top:66px}
 .steps3{display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px}
@@ -444,26 +464,45 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
           <li><span class="ck">★</span> <b>Bônus:</b> e-book “Como Disfarçar o que te Incomoda”</li>
           <li><span class="ck">★</span> <b>Bônus:</b> e-book “Imagem que Atrai Olhares”</li>
         </ul>
-        <div class="mock">
-          <div class="mhead"><div class="mtag">Primavera Clara</div><div class="msub">Prévia · sua cartela</div></div>
-          <div class="msect">Cores que te iluminam</div>
-          <div class="mgrid">
-            <span style="background:#FF7F50"></span><span style="background:#FFB347"></span><span style="background:#FFD966"></span><span style="background:#A8D08D"></span><span style="background:#66CDAA"></span><span style="background:#7FD1B9"></span>
-            <span style="background:#FF9E9E"></span><span style="background:#F08080"></span><span style="background:#F4A460"></span><span style="background:#E5679E"></span><span style="background:#F7B32B"></span><span style="background:#FF6B6B"></span>
-          </div>
-          <div class="msect">Neutros curinga</div>
-          <div class="mgrid ngrid">
-            <span style="background:#F5E9D0"></span><span style="background:#C8A165"></span><span style="background:#FFF8E7"></span><span style="background:#9DB4C0"></span>
-          </div>
-          <div class="mfoot">
-            <div class="mchip"><b>Ouro</b>metal ideal</div>
-            <div class="mchip"><b>Quente</b>subtom</div>
-            <div class="mchip"><b>Médio</b>contraste</div>
-          </div>
-        </div>
         <div class="cmp-cta">
           <a href="https://wa.me/5562991361147?text=Oi!%20%F0%9F%92%9B%20Quero%20descobrir%20a%20minha%20imagem%20completa" target="_blank" rel="noopener" class="btn-lp btn-wa">Quero a minha imagem completa 💬</a>
         </div>
+      </div>
+    </div>
+
+    <div class="dossie-wrap">
+      <span class="eyebrow">O material que você recebe</span>
+      <h2 class="section-headline" style="margin-top:12px">Um exemplo do seu <em>dossiê</em></h2>
+      <div class="dossie-preview reveal">
+        <div class="dp-card">
+          <div class="dp-head">
+            <div><div class="dp-title">A sua Colorimetria Pessoal</div><div class="dp-sub">Análise profissional</div></div>
+            <div class="dp-crown">👑</div>
+          </div>
+          <div class="dp-top">
+            <div class="dp-analysis">
+              <div class="dp-row"><span class="dp-ic">🌡️</span><div><small>Subtom da pele</small><b>Quente</b></div></div>
+              <div class="dp-row"><span class="dp-ic">◐</span><div><small>Contraste</small><b>Médio</b></div></div>
+              <div class="dp-row"><span class="dp-ic">☀️</span><div><small>Profundidade</small><b>Clara</b></div></div>
+              <div class="dp-row"><span class="dp-ic">🎨</span><div><small>Intensidade</small><b>Suave</b></div></div>
+            </div>
+            <div class="dp-season">
+              <small>Estação mais provável</small>
+              <div class="dp-season-name">Primavera Clara</div>
+              <p>Cores quentes, claras e vivas te iluminam — trazem leveza, frescor e um ar radiante ao seu rosto.</p>
+            </div>
+          </div>
+          <div class="dp-cartela-t">A sua cartela · Primavera Clara</div>
+          <div class="dp-grid">
+            <span style="background:#FF7F50"></span><span style="background:#FF9E7D"></span><span style="background:#FFB347"></span><span style="background:#FFC857"></span><span style="background:#FFD966"></span><span style="background:#F4E285"></span><span style="background:#B5D99C"></span><span style="background:#A8D08D"></span><span style="background:#7FD1B9"></span><span style="background:#66CDAA"></span><span style="background:#5FC9C9"></span><span style="background:#7FD3E0"></span><span style="background:#FF9E9E"></span>
+            <span style="background:#FF8FA3"></span><span style="background:#F08080"></span><span style="background:#F4A460"></span><span style="background:#E8A87C"></span><span style="background:#FFDAB9"></span><span style="background:#FDBCB4"></span><span style="background:#C1E1C1"></span><span style="background:#98D8C8"></span><span style="background:#B2E7E8"></span><span style="background:#FFDEAD"></span><span style="background:#FF6F91"></span><span style="background:#F7B32B"></span><span style="background:#FFB5A7"></span>
+          </div>
+          <div class="dp-foot">
+            <div class="dp-mini"><small>Neutros ideais</small><div class="dp-ng"><span style="background:#F5E9D0"></span><span style="background:#C8A165"></span><span style="background:#FFF8E7"></span><span style="background:#9DB4C0"></span></div></div>
+            <div class="dp-mini"><small>Metal ideal</small><b>Ouro dourado</b></div>
+          </div>
+        </div>
+        <p class="dp-note">Este é um exemplo. O seu dossiê é personalizado com a sua foto e a sua análise. 💛</p>
       </div>
     </div>
 
