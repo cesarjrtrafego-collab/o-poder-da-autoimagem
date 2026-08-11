@@ -289,6 +289,14 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
 #toolApp .toolcta h3{font-family:'Fraunces',serif;font-weight:600;font-size:21px;margin-bottom:8px}
 #toolApp .toolcta p{font-size:14px;opacity:.9;margin-bottom:16px}
 #toolApp .toolcta .btn{background:linear-gradient(120deg,#FF9E7D,#F7B32B);color:#3a1020;font-weight:700}
+#toolApp .twin{align-items:center}
+#toolApp .rlogo{height:30px;width:auto;border-radius:6px;opacity:.9;margin-top:4px}
+#toolApp .sw-grid.sw-sm{grid-template-columns:repeat(5,1fr);gap:8px}
+#toolApp .sw-grid.sw-sm .sw{border-radius:10px;filter:saturate(.9);opacity:.85}
+#toolApp .avoid-note{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 12px}
+#toolApp .howto{display:flex;gap:10px;align-items:flex-start;margin-top:14px;background:#fbeef2;border:1px solid #f2d6e0;border-radius:12px;padding:12px 14px}
+#toolApp .howto-ic{font-size:18px;line-height:1.35;flex:none}
+#toolApp .howto p{font-size:13.5px;line-height:1.55;color:#5c4a50;margin:0}
 #toolApp .footnote{font-size:11.5px;color:var(--muted);text-align:center;line-height:1.6;margin-top:8px;padding:0 8px}
 .hidden{display:none!important}
 </style>
@@ -402,6 +410,7 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
           <img id="rthumb" alt="você">
           <div class="twin">
             <div class="badge"><small>A sua estação de cor</small><b id="bSeason">—</b></div>
+            <img src="logo.jpg" class="rlogo" alt="O Poder da Autoimagem">
           </div>
         </div>
         <div class="card">
@@ -409,21 +418,27 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
           <div class="skinrow"><div class="skinchip" id="skinChip"></div><div><small>Tom de pele detectado</small><br><b id="skinName">—</b></div></div>
           <div id="metrics"></div>
         </div>
-        <div class="card">
-          <div class="sec-title">✨ Uma amostra da sua cartela</div>
+        <div class="card cartela-card">
+          <div class="sec-title">🎨 A sua Cartela de Cor</div>
           <div class="sw-grid" id="paletteGrid"></div>
-          <p class="metal" id="metalLine"></p>
           <div class="subttl">Seus neutros curinga</div>
           <div class="n-grid" id="neutralGrid"></div>
+          <p class="metal" id="metalLine"></p>
+          <div class="howto"><span class="howto-ic">💡</span><p id="comoUsar"></p></div>
+        </div>
+        <div class="card">
+          <div class="sec-title">🚫 Cores que te apagam</div>
+          <p class="avoid-note">Perto do rosto, estas tendem a marcar o cansaço e apagar a sua pele — use longe do rosto ou com moderação.</p>
+          <div class="sw-grid sw-sm" id="avoidGrid"></div>
         </div>
         <div class="card"><div class="sec-title">💬 A sua devolutiva</div><p class="devo" id="devo"></p></div>
         <div class="toolcta">
-          <h3>Isso é só uma amostra 💛</h3>
-          <p>No WhatsApp você libera a sua <b>cartela de cores completa</b> — e ainda descobre o seu <b>biotipo</b> e o seu <b>estilo</b>, pra montar a sua imagem por inteiro.</p>
-          <a class="btn" id="ctaBtn" href="https://wa.me/5562991361147?text=Oi!%20%F0%9F%92%9B%20Acabei%20de%20fazer%20a%20minha%20an%C3%A1lise%20e%20quero%20descobrir%20a%20minha%20imagem%20completa" target="_blank" rel="noopener">Quero descobrir a minha imagem completa 💛</a>
+          <h3>Essa é a sua cor 💛</h3>
+          <p>Isso foi só a sua <b>cor</b>. No WhatsApp você descobre a sua <b>imagem completa</b>: o seu <b>biotipo</b> (os cortes que valorizam o seu corpo) e o seu <b>estilo</b> — num dossiê só seu, com a curadoria da Kamila.</p>
+          <a class="btn" id="ctaBtn" href="https://wa.me/5562991361147?text=Oi!%20%F0%9F%92%9B%20Fiz%20a%20minha%20an%C3%A1lise%20de%20cores%20e%20quero%20a%20minha%20imagem%20completa%20(biotipo%20e%20estilo)" target="_blank" rel="noopener">Quero a minha imagem completa 💛</a>
         </div>
         <button class="btn btn-ghost" id="reset2" style="margin-top:6px">↺ fazer de novo</button>
-        <p class="footnote">Prévia da análise. O diagnóstico completo é enviado com a curadoria da Kamila.</p>
+        <p class="footnote">A sua cartela de cor é gerada na hora pela análise. O biotipo e o estilo vêm com a curadoria da Kamila.</p>
       </div>
     </div>
   </div>
@@ -434,18 +449,19 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">A sua entrega</span>
-      <h2 class="section-headline" style="margin-top:12px">Da amostra grátis à sua <em>imagem completa</em></h2>
-      <p class="lead center" style="margin-top:14px">Aqui você já vê uma amostra. No WhatsApp, a gente entrega tudo com calma, passo a passo — do seu jeito.</p>
+      <h2 class="section-headline" style="margin-top:12px">Da sua <em>cartela de cor</em> à sua imagem completa</h2>
+      <p class="lead center" style="margin-top:14px">A sua cor você já recebe agora, de graça. No WhatsApp, a gente completa a sua imagem — biotipo e estilo — com calma, do seu jeito.</p>
     </div>
     <div class="cmp">
       <div class="cmp-card cmp-free reveal">
         <span class="tag">Agora · grátis</span>
-        <h3>A sua Paleta de Cor</h3>
-        <p class="cdesc">O aperitivo pra você já sentir o poder das suas cores.</p>
+        <h3>A sua Cartela de Cor</h3>
+        <p class="cdesc">A sua cartela completa — gerada na hora, de graça.</p>
         <ul class="cmp-list">
           <li><span class="ck">✓</span> A sua <b>estação de cor</b> entre as 12</li>
-          <li><span class="ck">✓</span> A leitura da sua pele (subtom, profundidade, intensidade)</li>
-          <li><span class="ck">✓</span> Uma <b>amostra</b> da sua cartela de cores</li>
+          <li><span class="ck">✓</span> A leitura da sua pele (subtom, profundidade, intensidade e contraste)</li>
+          <li><span class="ck">✓</span> A sua <b>cartela de cor completa</b> — com os neutros e o metal ideal</li>
+          <li><span class="ck">✓</span> As <b>cores que te apagam</b> e como usar as suas cores</li>
           <li><span class="ck">✓</span> <b>Bônus:</b> o guia “Como Usar as Cores Certas”</li>
         </ul>
         <div class="cmp-cta">
@@ -455,11 +471,11 @@ footer .fnote{font-size:11.5px;color:#8a7a80;margin-top:22px;max-width:640px;mar
       <div class="cmp-card cmp-full reveal">
         <span class="tag">No WhatsApp · completo</span>
         <h3>A sua imagem por inteiro</h3>
-        <p class="cdesc">O dossiê de verdade, personalizado e lindo, pra guardar e usar sempre.</p>
+        <p class="cdesc">Além da cor: o dossiê de verdade, personalizado e lindo, pra guardar e usar sempre.</p>
         <ul class="cmp-list">
-          <li><span class="ck">★</span> A sua <b>cartela de cores completa</b> — todas as cores, os neutros e o metal ideal</li>
           <li><span class="ck">★</span> O seu <b>biotipo</b> — os cortes que valorizam o seu corpo</li>
           <li><span class="ck">★</span> O seu <b>estilo</b> — a sua assinatura de imagem</li>
+          <li><span class="ck">★</span> A sua cartela num <b>dossiê lindo</b> pra guardar e usar sempre</li>
           <li><span class="ck">★</span> A <b>consultora no bolso</b> pra te ajudar todo dia</li>
           <li><span class="ck">★</span> <b>Bônus:</b> e-book “Como Disfarçar o que te Incomoda”</li>
           <li><span class="ck">★</span> <b>Bônus:</b> e-book “Imagem que Atrai Olhares”</li>
@@ -623,10 +639,10 @@ if(typeof gsap!=='undefined'){
 
 /* ====================== FERRAMENTA DE ANÁLISE ====================== */
 const SEASONS={
-  primavera:{name:"Primavera",metal:"Ouro (dourado) 💛",palette:["#FF7F50","#FFB347","#FFD966","#A8D08D","#66CDAA","#FF9E9E","#F4A460","#7FD1B9","#F08080","#FFE4B5"],neutros:["#F5E9D0","#C8A165","#FFF8E7","#9DB4C0"],devoCor:"tons <b>quentes, claros e vivos</b> — coral, pêssego, dourado, verde-água",subs:["Clara","Quente","Brilhante"]},
-  verao:{name:"Verão",metal:"Prata (prateado) 🤍",palette:["#A7C7E7","#C8A2C8","#E6A8B8","#B0C4B1","#9FA8DA","#D8BFD8","#AEC6CF","#E8C5C1","#B4A7D6","#92A8A4"],neutros:["#B7C0C9","#F0F0F2","#C9B7B0","#7C8CA1"],devoCor:"tons <b>frios, suaves e delicados</b> — azul-poeira, lavanda, rosê, cinza",subs:["Clara","Frio","Suave"]},
-  outono:{name:"Outono",metal:"Ouro (dourado) 💛",palette:["#B7410E","#808000","#C99A46","#8B5A2B","#6B8E23","#A0522D","#2E8B87","#CC7722","#556B2F","#9C4A2E"],neutros:["#6B4A2B","#B3A369","#EDE0C8","#5B5B37"],devoCor:"tons <b>quentes, terrosos e profundos</b> — terracota, mostarda, verde-oliva, ferrugem",subs:["Suave","Quente","Profundo"]},
-  inverno:{name:"Inverno",metal:"Prata (prateado) 🤍",palette:["#C0002B","#0047AB","#009B77","#C71585","#000000","#4B0082","#00A3E0","#7D2181","#E0115F","#1c1c1c"],neutros:["#000000","#FFFFFF","#333333","#1B2A4A"],devoCor:"tons <b>intensos e contrastantes</b> — vermelho puro, cobalto, esmeralda, preto e branco",subs:["Brilhante","Frio","Profundo"]}
+  primavera:{name:"Primavera",metal:"Ouro (dourado) 💛",palette:["#FF7F50","#FFB347","#FFD966","#A8D08D","#66CDAA","#FF9E9E","#F4A460","#7FD1B9","#F08080","#FFE4B5"],neutros:["#F5E9D0","#C8A165","#FFF8E7","#9DB4C0"],evitar:["#4B4E6D","#2F2F2F","#6E7F80","#8B8B8B","#3B2F45"],devoCor:"tons <b>quentes, claros e vivos</b> — coral, pêssego, dourado, verde-água",comoUsar:"Traga essas cores <b>para perto do rosto</b> (blusas, lenços, brincos dourados) — é ali que elas mais te iluminam.",subs:["Clara","Quente","Brilhante"]},
+  verao:{name:"Verão",metal:"Prata (prateado) 🤍",palette:["#A7C7E7","#C8A2C8","#E6A8B8","#B0C4B1","#9FA8DA","#D8BFD8","#AEC6CF","#E8C5C1","#B4A7D6","#92A8A4"],neutros:["#B7C0C9","#F0F0F2","#C9B7B0","#7C8CA1"],evitar:["#B7410E","#E2571E","#000000","#7A4B00","#C97B00"],devoCor:"tons <b>frios, suaves e delicados</b> — azul-poeira, lavanda, rosê, cinza",comoUsar:"Prefira combinações <b>suaves e harmônicas</b>, sem estourar preto e branco juntos — o seu charme está na leveza.",subs:["Clara","Frio","Suave"]},
+  outono:{name:"Outono",metal:"Ouro (dourado) 💛",palette:["#B7410E","#808000","#C99A46","#8B5A2B","#6B8E23","#A0522D","#2E8B87","#CC7722","#556B2F","#9C4A2E"],neutros:["#6B4A2B","#B3A369","#EDE0C8","#5B5B37"],evitar:["#00A3E0","#E6A8B8","#B4A7D6","#000000","#AEC6CF"],devoCor:"tons <b>quentes, terrosos e profundos</b> — terracota, mostarda, verde-oliva, ferrugem",comoUsar:"Aposte nos <b>dourados e terrosos perto do rosto</b> — eles aquecem a sua pele e te deixam radiante.",subs:["Suave","Quente","Profundo"]},
+  inverno:{name:"Inverno",metal:"Prata (prateado) 🤍",palette:["#C0002B","#0047AB","#009B77","#C71585","#000000","#4B0082","#00A3E0","#7D2181","#E0115F","#1c1c1c"],neutros:["#000000","#FFFFFF","#333333","#1B2A4A"],evitar:["#C99A46","#808000","#D2B48C","#A0522D","#BFA980"],devoCor:"tons <b>intensos e contrastantes</b> — vermelho puro, cobalto, esmeralda, preto e branco",comoUsar:"Ouse no <b>contraste</b> — preto com branco, cores puras e vibrantes perto do rosto ficam poderosas em você.",subs:["Brilhante","Frio","Profundo"]}
 };
 const BIOS={
   ampulheta:{name:"Ampulheta",yes:["Peças que marcam a cintura","Vestidos tubinho e godê","Cinto na linha da cintura","Alfaiataria ajustada ao corpo"],no:["Roupas retas e largas que escondem a cintura","Peças sem forma, tipo saco"],devo:"Você tem o corpo <b>equilibrado com a cintura marcada</b> — o segredo é sempre valorizar esse meio."},
@@ -683,11 +699,13 @@ function render(c){
   el('rthumb').src=imgSrc;el('bSeason').textContent=c.fullName;
   el('skinChip').style.background=c.skinHex;el('skinName').textContent=c.skinTxt;
   const mb=el('metrics');mb.innerHTML='';c.metrics.forEach(m=>{const row=document.createElement('div');row.className='mrow';row.innerHTML='<span class="ml">'+m.l+'</span><span class="mbarwrap"><span class="mbar"></span></span><span class="mv">'+m.v+'</span>';mb.appendChild(row);requestAnimationFrame(()=>{row.querySelector('.mbar').style.width=m.pct+'%';});});
-  swatches('paletteGrid',c.season.palette.slice(0,5));
-  el('metalLine').innerHTML='🔒 Esta é só uma <b>amostra</b>. A sua <b>Cartela de Cor completa</b> — todas as cores, os neutros e o metal ideal, em alta pra guardar e usar — você desbloqueia no WhatsApp.';
-  el('neutralGrid').style.display='none';if(el('neutralGrid').previousElementSibling)el('neutralGrid').previousElementSibling.style.display='none';
+  swatches('paletteGrid',c.season.palette);
+  swatches('neutralGrid',c.season.neutros);
+  swatches('avoidGrid',c.season.evitar);
+  el('metalLine').innerHTML='✨ O seu metal ideal: <b>'+c.season.metal+'</b>';
+  el('comoUsar').innerHTML=c.season.comoUsar;
   const contrastTip=c.contrastHigh?'Como o seu contraste é alto, ouse em combinações de cores bem diferentes entre si — fica poderoso em você.':'Como o seu contraste é mais suave, prefira tons próximos e harmônicos, sem estourar em preto e branco juntos.';
-  el('devo').innerHTML='A leitura da sua foto apontou '+c.skinTxt.toLowerCase()+', o que te posiciona como <b>'+c.fullName+'</b>. A sua paleta pede '+c.season.devoCor+'. '+contrastTip+' <br><br>💛 A sua <b>cartela completa</b> (e, se quiser, o seu biotipo e estilo) você desbloqueia no WhatsApp.';
+  el('devo').innerHTML='A leitura da sua foto apontou '+c.skinTxt.toLowerCase()+', o que te posiciona como <b>'+c.fullName+'</b>. A sua paleta pede '+c.season.devoCor+'. '+contrastTip;
 }
 function resetAll(){stopCamera();['camView','preview','loader','result'].forEach(id=>el(id).style.display='none');el('camErr').style.display='none';el('chooser').style.display='block';el('cardUpload').style.display='block';el('file').value='';toolTop();}
 el('reset1').addEventListener('click',resetAll);
